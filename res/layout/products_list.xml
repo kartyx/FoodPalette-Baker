@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal"
+    android:layout_margin="10dp"
+     >
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:paddingRight="10dp"
+        android:src="@drawable/prod" />
+
+    <TextView
+        android:id="@+id/ProductName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="roboto"
+        android:gravity="center"
+        android:paddingTop="10dp"
+        android:text="Product 1"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/AvailableToppings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/ProductName"
+        android:layout_below="@+id/ProductName"
+        android:paddingTop="3dp"
+        android:text="Available Toppings:" />
+    <TextView
+        android:id="@+id/Toppings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/AvailableToppings"
+        android:layout_below="@+id/AvailableToppings"
+        android:text="Topping 1, Topping 2, Topping 3" 
+        android:textSize="10sp"
+        />
+
+</RelativeLayout>

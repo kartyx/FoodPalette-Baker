@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    <ImageView 
+        android:layout_height="200dp"
+        android:layout_width="200dp"
+        android:src="@drawable/prod"
+        android:contentDescription="Product Image"
+        android:layout_gravity="center"
+        />
+    <LinearLayout 
+        android:layout_width="match_parent"
+    	android:layout_height="wrap_content"
+    	android:orientation="vertical" 
+        ></LinearLayout>
+    <LinearLayout 
+        android:layout_width="match_parent"
+    	android:layout_height="wrap_content"
+    	android:orientation="horizontal" 
+    	android:weightSum="100"
+        >	
+        <Button 
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Add Topping"
+            android:layout_weight="50"
+            />
+        <Button 
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Done"
+            android:layout_weight="50"
+            />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,77 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.foodpalette_baker"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="22" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity 
+            android:name="com.foodpalette_baker.LoginActivity"
+            android:theme="@style/AppTheme"
+            android:label="Login Activity"
+            >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>"
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity 
+            android:name="com.foodpalette_baker.MainActivity"
+            android:theme="@style/AppTheme"
+            android:label="Login Activity"
+            >
+            <intent-filter>
+                <action android:name="com.foodpalette_baker.MAINACTIVITY"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity 
+            android:name="com.foodpalette_baker.OrdersActivity"
+            android:theme="@style/AppTheme"
+            android:label="Login Activity"
+            >
+            <intent-filter>
+                <action android:name="com.foodpalette_baker.ORDERSACTIVITY"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity 
+            android:name="com.foodpalette_baker.ProductsActivity"
+            android:theme="@style/AppTheme"
+            android:label="Login Activity"
+            >
+            <intent-filter>
+                <action android:name="com.foodpalette_baker.PRODUCTSACTIVITY"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity 
+            android:name="com.foodpalette_baker.PaymentActivity"
+            android:theme="@style/AppTheme"
+            android:label="Login Activity"
+            >
+            <intent-filter>
+                <action android:name="com.foodpalette_baker.PAYMENTACTIVITY"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity 
+            android:name="com.foodpalette_baker.ReviewsActivity"
+            android:theme="@style/AppTheme"
+            android:label="Login Activity"
+            >
+            <intent-filter>
+                <action android:name="com.foodpalette_baker.REVIEWSACTIVITY"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
