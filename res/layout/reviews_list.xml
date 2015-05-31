@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:padding="10dp"
+    android:background="#F0F0F0"
+    >
+<TextView 
+    android:id="@+id/ReviewUsername"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="UserName"
+    android:textSize="15sp"
+    android:fontFamily="Roboto"
+    />    
+<TextView 
+    android:id="@+id/ReviewDate"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="25 May 2015"
+    android:textSize="10sp"
+    android:fontFamily="Roboto"
+    android:textColor="#BCBCBC"
+    />    
+<TextView 
+    android:id="@+id/ReviewContent"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:maxLines="5"
+    android:text="This is a Sample Review of the Sample product that i bought last month. I have been using the product for the last 1 month and i have no problems with the product except for the fact that it was not delivered on time"
+    android:textSize="13sp"
+    />        
+</LinearLayout>

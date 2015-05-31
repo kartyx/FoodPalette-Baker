@@ -10,7 +10,16 @@
         android:contentDescription="Product Image"
         android:layout_gravity="center"
         />
+    <TextView 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Product"
+        android:id="@+id/ProductName"
+        android:textSize="20sp"
+        />
     <LinearLayout 
+        android:id="@+id/editText"
         android:layout_width="match_parent"
     	android:layout_height="wrap_content"
     	android:orientation="vertical" 
@@ -26,12 +35,14 @@
             android:layout_height="wrap_content"
             android:text="Add Topping"
             android:layout_weight="50"
+            android:onClick="AddTopping"
             />
         <Button 
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:text="Done"
             android:layout_weight="50"
+            android:onClick="OnDone"
             />
     </LinearLayout>
 </LinearLayout>

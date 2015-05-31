@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+<LinearLayout 
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_gravity="center"
+    android:weightSum="100"
+    android:paddingTop="10dp"
+    android:paddingBottom="5dp"
+    android:gravity="center"
+    >
+    <TextView 
+        android:layout_height="match_parent"
+        android:layout_width="wrap_content"
+        android:text="ARE YOU AVAILABLE TODAY"
+        android:fontFamily="ROBOTO"
+        android:textStyle="bold"
+        android:textSize="15sp"
+        android:paddingRight="10dp"
+        android:paddingLeft="10dp"
+        />
+    <ToggleButton 
+        android:layout_width="50dp"
+        android:layout_height="20dp"
+        android:background="@drawable/toggle_selector"
+        android:checked="false"
+        android:text=""
+        android:textOff=""
+        android:textOn=""
+        android:paddingLeft="10dp"
+        android:gravity="center"
+        android:paddingRight="10dp"
+        />
+</LinearLayout>
+<com.foodpalette_baker.RoundedImageView
+        android:id="@+id/imageView_round"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="15dp"
+        android:src="@drawable/prod" 
+        android:layout_gravity="center"
+        />
+<TextView 
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="KING BAKER"
+    android:textSize="15sp"
+    android:textColor="#999"
+    android:textStyle="bold"
+    android:fontFamily="ROBOTO"
+    android:gravity="center"
+    android:layout_marginBottom="15dp"
+    
+    />	
+    
+<LinearLayout 
+	android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#4f4f4f"
+    android:orientation="horizontal"
+    android:layout_gravity="center"
+    android:weightSum="100"  
+    android:paddingTop="5dp"  
+    >
+<TextView 
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_weight="33"
+    android:text="RATING"
+    android:textColor="#FFF"
+    android:textStyle="bold"
+    android:fontFamily="roboto"
+    android:gravity="center"
+    android:textSize="12sp"
+    />
+	<View 
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:background="#FFF"
+        />
+<TextView 
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_weight="33"
+    android:text="TOTAL PRODUCTS"
+    android:textColor="#FFF"
+    android:textStyle="bold"
+    android:fontFamily="roboto"
+    android:gravity="center"
+    android:textSize="12sp"
+    />
+	<View 
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:background="#FFF"
+        />
+<TextView 
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_weight="33"
+    android:text="TOTAL REVIEWS"
+    android:textColor="#FFF"
+    android:textStyle="bold"
+    android:fontFamily="roboto"
+    android:gravity="center"
+    android:textSize="12sp"
+    />
+</LinearLayout>
+<LinearLayout 
+	android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#4f4f4f"
+    android:orientation="horizontal"
+    android:layout_gravity="center"
+    android:weightSum="100" 
+    android:paddingBottom="5dp"  
+    >
+<TextView 
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_weight="33"
+    android:text="4.8"
+    android:textColor="#FFF"
+    android:textStyle="bold"
+    android:fontFamily="roboto"
+    android:gravity="center"
+    android:textSize="12sp"
+    />
+<View 
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:background="#FFF"
+        />
+<TextView 
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_weight="33"
+    android:text="10"
+    android:textColor="#FFF"
+    android:textStyle="bold"
+    android:fontFamily="roboto"
+    android:gravity="center"
+    android:textSize="12sp"
+    />
+<View 
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:background="#FFF"
+        />
+<TextView 
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_weight="33"
+    android:text="128"
+    android:textColor="#FFF"
+    android:textStyle="bold"
+    android:fontFamily="roboto"
+    android:gravity="center"
+    android:textSize="12sp"
+    />
+</LinearLayout>
+<LinearLayout 
+    android:background="#FFF"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    >
+    <TextView 
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:fontFamily="ROBOTO"
+    android:textStyle="bold"
+    android:padding="5dp"
+    android:gravity="center"
+    android:text="PENDING ORDERS"
+    android:textSize="18sp"
+    android:layout_marginLeft="20dp"
+    android:layout_marginRight="20dp"
+    android:background="#19EEAF"
+    android:textColor="#FFF"
+    android:layout_marginTop="10dp"
+    />
+
+    <ListView
+        android:layout_marginTop="10dp"
+        android:id="@+id/orderslist"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="#F0F0F0"
+        android:clickable="true"
+        android:divider="#fff"
+        android:dividerHeight="2dp" >
+    </ListView>
+
+	<View 
+	    android:layout_width="match_parent"
+	    android:layout_marginLeft="20dp"
+    	android:layout_marginRight="20dp"
+    	android:layout_height="4dp"
+    	android:background="#FFF"
+	    />
+<!-- <View 
+    android:background="#000"
+    android:layout_width="match_parent"
+    android:layout_height="1dp"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:paddingBottom="20dp"
+    /> -->
+    </LinearLayout>
+
+    </LinearLayout>
+    
+

@@ -25,7 +25,7 @@
         <activity 
             android:name="com.foodpalette_baker.MainActivity"
             android:theme="@style/AppTheme"
-            android:label="Login Activity"
+            android:label="Main Activity"
             >
             <intent-filter>
                 <action android:name="com.foodpalette_baker.MAINACTIVITY"/>
@@ -35,7 +35,7 @@
         <activity 
             android:name="com.foodpalette_baker.OrdersActivity"
             android:theme="@style/AppTheme"
-            android:label="Login Activity"
+            android:label="Orders Activity"
             >
             <intent-filter>
                 <action android:name="com.foodpalette_baker.ORDERSACTIVITY"/>
@@ -45,7 +45,7 @@
         <activity 
             android:name="com.foodpalette_baker.ProductsActivity"
             android:theme="@style/AppTheme"
-            android:label="Login Activity"
+            android:label="Product Activity"
             >
             <intent-filter>
                 <action android:name="com.foodpalette_baker.PRODUCTSACTIVITY"/>
@@ -55,7 +55,7 @@
         <activity 
             android:name="com.foodpalette_baker.PaymentActivity"
             android:theme="@style/AppTheme"
-            android:label="Login Activity"
+            android:label="Payment Activity"
             >
             <intent-filter>
                 <action android:name="com.foodpalette_baker.PAYMENTACTIVITY"/>
@@ -65,10 +65,40 @@
         <activity 
             android:name="com.foodpalette_baker.ReviewsActivity"
             android:theme="@style/AppTheme"
-            android:label="Login Activity"
+            android:label="Reviews Activity"
             >
             <intent-filter>
                 <action android:name="com.foodpalette_baker.REVIEWSACTIVITY"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity 
+            android:name="com.foodpalette_baker.ToppingActivity"
+            android:theme="@style/AppTheme"
+            android:label="Topping Activity"
+            >
+            <intent-filter>
+                <action android:name="com.foodpalette_baker.TOPPINGACTIVITY"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity 
+            android:name="com.foodpalette_baker.PendingHistoryActivity"
+            android:theme="@style/AppTheme"
+            android:label="Topping Activity"
+            >
+            <intent-filter>
+                <action android:name="com.foodpalette_baker.PENDINGHISTORYACTIVITY"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity 
+            android:name="com.foodpalette_baker.PendingPaymentActivity"
+            android:theme="@style/AppTheme"
+            android:label="Topping Activity"
+            >
+            <intent-filter>
+                <action android:name="com.foodpalette_baker.PENDINGPAYMENTACTIVITY"/>
                 <category android:name="android.intent.category.DEFAULT"/>
             </intent-filter>
         </activity>
