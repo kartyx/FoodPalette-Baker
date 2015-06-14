@@ -29,6 +29,8 @@
     	android:layout_height="wrap_content"
     	android:orientation="horizontal" 
     	android:weightSum="100"
+    	android:layout_marginLeft="10dp"
+    	android:layout_marginRight="10dp"
         >	
         <Button 
             android:layout_width="0dp"
@@ -36,13 +38,23 @@
             android:text="Add Topping"
             android:layout_weight="50"
             android:onClick="AddTopping"
+            android:fontFamily="roboto"
+            android:background="#19eeaf"
+            android:textStyle="bold"
+            android:textColor="#FFF"
+            android:layout_marginRight="5dp"
             />
         <Button 
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:text="Done"
             android:layout_weight="50"
+            android:textColor="#FFF"
             android:onClick="OnDone"
+            android:fontFamily="roboto"
+            android:background="#19eeaf"
+            android:textStyle="bold"
+            android:layout_marginLeft="5dp"
             />
     </LinearLayout>
 </LinearLayout>

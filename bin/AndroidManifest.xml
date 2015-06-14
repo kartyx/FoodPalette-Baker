@@ -6,20 +6,35 @@
     <uses-sdk
         android:minSdkVersion="8"
         android:targetSdkVersion="22" />
-
+	<uses-permission 
+	    android:name="android.permission.ACCESS_NETWORK_STATE"
+	    />
+	<uses-permission 
+	    	    android:name="android.permission.INTERNET"
+	    />
     <application
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity 
-            android:name="com.foodpalette_baker.LoginActivity"
+            android:name="com.foodpalette_baker.WelcomeActivity"
             android:theme="@style/AppTheme"
             android:label="Login Activity"
             >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>"
                 <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity 
+            android:name="com.foodpalette_baker.LoginActivity"
+            android:theme="@style/AppTheme"
+            android:label="Login Activity"
+            >
+            <intent-filter>
+                <action android:name="com.foodpalette_baker.LOGINACTIVITY"/>"
+                <category android:name="android.intent.category.DEFAULT"/>
             </intent-filter>
         </activity>
         <activity 
@@ -85,7 +100,7 @@
         <activity 
             android:name="com.foodpalette_baker.PendingHistoryActivity"
             android:theme="@style/AppTheme"
-            android:label="Topping Activity"
+            android:label="Pending History Activity"
             >
             <intent-filter>
                 <action android:name="com.foodpalette_baker.PENDINGHISTORYACTIVITY"/>
@@ -95,10 +110,20 @@
         <activity 
             android:name="com.foodpalette_baker.PendingPaymentActivity"
             android:theme="@style/AppTheme"
-            android:label="Topping Activity"
+            android:label="Pending Payment Activity"
             >
             <intent-filter>
                 <action android:name="com.foodpalette_baker.PENDINGPAYMENTACTIVITY"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity 
+            android:name="com.foodpalette_baker.WalletActivity"
+            android:theme="@style/AppTheme"
+            android:label="Wallet Activity"
+            >
+            <intent-filter>
+                <action android:name="com.foodpalette_baker.WALLETACTIVITY"/>
                 <category android:name="android.intent.category.DEFAULT"/>
             </intent-filter>
         </activity>

@@ -12,7 +12,7 @@
     android:text="Reviews &amp; Comments"
     android:fontFamily="roboto"
     android:textSize="20sp"
-    android:background="#19eeaf"
+    android:background="#0ee9af"
     android:textColor="#FFF"
     android:padding="5dp"
     />    

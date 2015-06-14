@@ -27,7 +27,7 @@ List<EditText> newEditText;
 		setContentView(R.layout.activity_topping);
 		hidden=(LinearLayout)findViewById(R.id.editText);
 		ProductName=(TextView)findViewById(R.id.ProductName);
-		name=getIntent().getStringExtra("Product");
+		name=getIntent().getStringExtra("ProductName");
 		ProductName.setText(name);
 		getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 		  getSupportActionBar().setHomeButtonEnabled(true);

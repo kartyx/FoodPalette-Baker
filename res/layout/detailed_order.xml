@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+<com.foodpalette_baker.RoundedImageView
+        android:id="@+id/imageView_round"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="15dp"
+        android:src="@drawable/prod" 
+        android:layout_gravity="center"
+        />
+<TextView 
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="KING BAKER"
+    android:textSize="15sp"
+    android:textColor="#999"
+    android:textStyle="bold"
+    android:fontFamily="ROBOTO"
+    android:gravity="center"
+    android:layout_marginBottom="15dp"  
+    />	
+ <ScrollView 
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+     >
+<LinearLayout    
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" 
+    android:layout_margin="10dp">
+<TextView 
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp"
+    android:text="Product Name"
+    android:background="#0ee9af"
+    android:textColor="#FFF"
+    android:layout_marginTop="5dp"
+    android:layout_marginBottom="3dp"
+    android:gravity="center"
+    android:textStyle="bold"
+    />        
+<TextView 
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="5dp"
+    android:text="Product Cake"
+    android:background="#f0f0f0"
+    android:textColor="#000"
+    android:gravity="center"
+    />        
+<TextView 
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp"
+    android:text="Price"
+    android:background="#0ee9af"
+    android:textColor="#FFF"
+    android:layout_marginTop="5dp"
+    android:layout_marginBottom="3dp"
+    android:gravity="center"
+    android:textStyle="bold"
+    />        
+<TextView 
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="5dp"
+    android:text="Rs.500"
+    android:background="#f0f0f0"
+    android:textColor="#000"
+    android:gravity="center"
+    />        
+<TextView 
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp"
+    android:text="Topping"
+    android:background="#0ee9af"
+    android:textColor="#FFF"
+    android:layout_marginTop="5dp"
+    android:layout_marginBottom="3dp"
+    android:gravity="center"
+    android:textStyle="bold"
+    />        
+<TextView 
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="5dp"
+    android:text="Vannilla Topping"
+    android:background="#f0f0f0"
+    android:textColor="#000"
+    android:gravity="center"
+    />  
+<TextView 
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp"
+    android:text="Description"
+    android:background="#0ee9af"
+    android:textColor="#FFF"
+    android:layout_marginTop="5dp"
+    android:layout_marginBottom="3dp"
+    android:gravity="center"
+    android:textStyle="bold"
+    />
+
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#f0f0f0"
+    android:maxLines="10"
+    android:padding="5dp"
+    android:text="This is a short descrption of how i want my cake to be. This cake will have two layers of chocolate with a vannilla topping layer."
+    android:textAlignment="textStart"
+    android:textColor="#000" />
+    
+    <LinearLayout 
+            android:layout_width="match_parent"
+   			android:layout_height="wrap_content"
+    		android:orientation="horizontal"
+    		android:weightSum="100"
+    		android:layout_marginTop="10dp"
+     >
+        <Button 
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="ACCEPT"
+            android:textColor="#FFF"
+            android:background="#0ee9af"
+            android:layout_weight="50"
+            android:layout_marginRight="3dp"
+            />
+        <Button 
+            android:layout_weight="50"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="REJECT"
+            android:textColor="#FFF"
+            android:background="#fd4948"
+            android:layout_marginLeft="3dp"
+            />
+        </LinearLayout>
+</LinearLayout>
+</ScrollView>
+</LinearLayout>

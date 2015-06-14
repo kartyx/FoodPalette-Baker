@@ -54,21 +54,25 @@
 	    android:textColor="#aaa"
 	    android:hint="Username"
 	    android:background="@drawable/edittext"
+	    android:id="@+id/username"
 	    />
 	<EditText 
 	    android:layout_width="wrap_content"
 	    android:layout_height="wrap_content"
 	    android:ems="10"
-	    android:background="@drawable/edittext"
+	    android:background="@drawable/edittext" 
 	    android:textColor="#aaa"
 	    android:hint="Password"
+	    android:id="@+id/password"
 	    />
 	<Button 
 		    android:layout_width="wrap_content"
 		    android:layout_height="wrap_content"
 		    android:text="Login"
+		    android:textStyle="bold"
+		    android:padding="10dp"
 		    android:textColor="#FFF"
-		    android:background="#1fae66"
+		    android:background="#0ee9af"
 		    android:ems="10"
 		    android:layout_marginTop="20dp"
 		    android:onClick="login"

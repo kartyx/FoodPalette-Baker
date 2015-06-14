@@ -1,5 +1,20 @@
 <resources>
 
     <string name="app_name">FoodPalette-Baker</string>
-
+    <string name="drawer_open">Opens the drawer</string>
+    <string name="drawer_close">Closes the drawer</string>
+	
+    <string-array name="navBarItems">
+        <item>Home</item>
+        <item>Orders</item>
+        <item>Payment Tracker</item>
+        <item>Reviews &amp; Comments</item>
+       
+    </string-array>
+    <array name="navBarImages">
+        <item>@drawable/ic_action_computer</item>
+        <item>@drawable/orders</item>
+        <item>@drawable/payment</item>
+        <item>@drawable/reviews</item>
+    </array>
 </resources>

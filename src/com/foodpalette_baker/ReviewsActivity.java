@@ -3,21 +3,29 @@ package com.foodpalette_baker;
 import java.util.ArrayList;
 import java.util.List;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarActivity;
+import android.view.LayoutInflater;
 import android.view.MenuItem;
+import android.widget.FrameLayout;
 import android.widget.ListView;
 import android.widget.TextView;
 
-public class ReviewsActivity extends ActionBarActivity {
+public class ReviewsActivity extends MainActivity {
 private ListView reviewslist;
 private List<String> UserName,date,Review;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_reviews);
+		  framed = (FrameLayout)findViewById(R.id.activity_frame);
+		  LayoutInflater layoutInflater = (LayoutInflater)getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+		  defaultView = layoutInflater.inflate(R.layout.activity_reviews, null,false);
+		  framed.removeAllViews();
+		  framed.addView(defaultView);
+		  
 		reviewslist=(ListView)findViewById(R.id.reviewslist);
 		UserName=new ArrayList<String>();
 		UserName.add("User 1");
@@ -42,18 +50,7 @@ private List<String> UserName,date,Review;
 		      ReviewsAdapter adapter = new ReviewsAdapter(getBaseContext(),Items);	
 		
 		      reviewslist.setAdapter(adapter);	
-		      getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-			  getSupportActionBar().setHomeButtonEnabled(true);
 			  getSupportActionBar().setTitle("Reviews");
 	}
-	@Override
-	public boolean onOptionsItemSelected(MenuItem item) { 
-	        switch (item.getItemId()) {
-	        case android.R.id.home: 
-	            onBackPressed();
-	            return true;
-	        }
 
-	    return super.onOptionsItemSelected(item);
-	}
 }

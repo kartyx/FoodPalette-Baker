@@ -14,7 +14,7 @@
     android:gravity="center"
     android:text="Available Prodcuts"
     android:textSize="20sp"
-    android:background="#19EEAF"
+    android:background="#0ee9af"
     android:textColor="#FFF"
     />     
 <ListView 

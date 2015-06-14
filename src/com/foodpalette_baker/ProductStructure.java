@@ -1,39 +1,75 @@
 package com.foodpalette_baker;
 
-import android.graphics.Bitmap;
-
 public class ProductStructure {
-	 	private String Product;
-	    private Bitmap image;
-	    private String available;
-	    private String toppings;
-	    
+	 	private String ProductId,ProductImage,ProductName,ProductPrice,ProductDescription,Availability,NoOfBuys,AvailableToppings;
+	       
 	 
 	 
-	    public ProductStructure(String Product,String toppings) {
-	                this.Product = Product;
-	                this.available = "Available Toppings";
-	                this.image = null;
-	                this.toppings=toppings;
+	    public ProductStructure(String ProductId,String ProductName,String ProductImage,String ProductPrice,String ProductDescription,String Availability,String NoOfBuys,String AvailableToppings) {
+	                this.ProductId = ProductId;
+	                this.ProductImage = ProductImage;
+	                this.ProductName = ProductName;
+	                this.ProductPrice = ProductPrice;
+	                this.ProductDescription = ProductDescription;
+	                this.Availability = Availability;
+	                this.NoOfBuys=NoOfBuys;	      
+	                this.AvailableToppings=AvailableToppings;
 	    }	
 
-	    public String getProduct() {
-	        return Product;
+	    public String getProductId() {
+	        return ProductId;
 	    }
 	 
-	    public void setProduct(String Products) {
-	        this.Product = Products;
-	    }
-	    public String getTopping(){
-	    	return toppings;
+	    public void setProductId(String ProductId) {
+	        this.ProductId = ProductId;
 	    }
 	    
-	    public void setTopping(String toppings)
-	    {
-	    	this.toppings=toppings;
+	    public String getProductImage(){
+	    	return ProductImage;
 	    }
-	          public Bitmap getImage() {
-	        return image;
+	    public void setProductImage(String ProductImage){
+	    	this.ProductImage=ProductImage;
 	    }
-	 
+	    
+	    public String getProductName(){
+	    	return ProductName;
+	    }
+	    public void setProductName(String ProductName){
+	    	this.ProductName=ProductName;
+	    }
+	    
+	    public String getProductPrice(){
+	    	return ProductPrice;
+	    }
+	    public void setProductPrice(String ProductPrice){
+	    	this.ProductPrice=ProductPrice;
+	    }
+	    
+	    public String getProductDescription(){
+	    	return ProductDescription;
+	    }
+	    public void setProductDescription(String ProductDescription){
+	    	this.ProductDescription=ProductDescription;
+	    }
+	    
+	    public String getAvailability(){
+	    	return Availability;
+	    }
+	    public void setAvailability(String Availability){
+	    	this.Availability=Availability;
+	    }
+	    
+	    public String getNoOfBuys(){
+	    	return NoOfBuys;
+	    }
+	    public void setNoOfBuys(String NoOfBuys){
+	    	this.NoOfBuys=NoOfBuys;
+	    }
+	    
+	    public String getAvailableToppings(){
+	    	return AvailableToppings;
+	    }
+	    public void setAvailableToppings(String AvailableToppings){
+	    	this.AvailableToppings=AvailableToppings;
+	    }
 }

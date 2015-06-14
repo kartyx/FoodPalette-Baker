@@ -12,6 +12,7 @@
     android:layout_marginLeft="10dp"
     android:layout_marginRight="10dp"
     android:paddingBottom="7dp"
+    android:descendantFocusability="blocksDescendants"
      >
 
     <ImageView
@@ -22,39 +23,39 @@
         android:layout_weight="6"
         android:layout_gravity="center"
         />
-<LinearLayout
-    	android:layout_width="0dp"
-    	android:layout_height="wrap_content"
-    	android:orientation="vertical"
-    	android:layout_weight="60"
-    	android:layout_gravity="center"
-    >
- <TextView
-        android:id="@+id/ProductName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="roboto"
-        android:gravity="center"
-        android:text="Product 1"
-        android:textSize="20sp" />
 
-    <TextView
-        android:id="@+id/AvailableToppings"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:paddingTop="3dp"
-        android:text="Available Toppings:" />
-    <TextView
-        android:id="@+id/Toppings"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Topping 1, Topping 2, Topping 3" 
-        android:textSize="10sp"
-        />    
-    
-</LinearLayout>
+        android:layout_weight="60"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/ProductName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="roboto"
+            android:gravity="center"
+            android:text="Product 1"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/AvailableToppings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="3dp"
+            android:text="Available Toppings:" />
+
+        <TextView
+            android:id="@+id/Toppings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Topping 1, Topping 2, Topping 3"
+            android:textSize="10sp" />
+    </LinearLayout>
 
 <Button
+    android:id="@+id/productstatus"
     android:layout_width="0dp"
     android:layout_height="wrap_content"
     android:layout_weight="30"

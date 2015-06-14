@@ -5,6 +5,7 @@ package com.foodpalette_baker;
 import com.viewpagerindicator.TitlePageIndicator;
 import com.viewpagerindicator.TitlePageIndicator.IndicatorStyle;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
@@ -12,19 +13,25 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.ActionBarActivity;
+import android.view.LayoutInflater;
 import android.view.MenuItem;
+import android.widget.FrameLayout;
 import android.widget.TextView;
 
-public class OrdersActivity extends ActionBarActivity {
+public class OrdersActivity extends MainActivity {
 
 		 private static final String[] CONTENT = new String[] { "Pending", "All"};
 
 		    @Override
 		    protected void onCreate(Bundle savedInstanceState) {
 		        super.onCreate(savedInstanceState);
-				setContentView(R.layout.activity_orders);
-
-		        FragmentPagerAdapter adapter = new OrderAdapter(getSupportFragmentManager());
+		          framed = (FrameLayout)findViewById(R.id.activity_frame);
+ 				  LayoutInflater layoutInflater = (LayoutInflater)getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+				  defaultView = layoutInflater.inflate(R.layout.activity_orders, null,false);
+				  framed.addView(defaultView);
+		       
+				
+				FragmentPagerAdapter adapter = new OrderAdapter(getSupportFragmentManager());
 
 		        ViewPager pager = (ViewPager)findViewById(R.id.pager);
 		        pager.setAdapter(adapter);
@@ -37,18 +44,16 @@ public class OrdersActivity extends ActionBarActivity {
 			    	
 		        
 		        final float density = getResources().getDisplayMetrics().density;
-		        indicator.setBackgroundColor(0xFFFFFFFF);
-		        indicator.setFooterColor(0xFF0EE9AF);
+		        indicator.setBackgroundColor(0xFF4F4F4F);
+		        indicator.setFooterColor(0xFFFFFFFF);
 		        indicator.setFooterLineHeight(2 * density); 
 		        indicator.setFooterIndicatorHeight(5 * density); 
 		        indicator.setFooterIndicatorStyle(IndicatorStyle.Triangle);
-		        indicator.setTextColor(0xAA000000);
-		        indicator.setSelectedColor(0xFF000000);
+		        indicator.setTextColor(0xAAFFFFFF);
+		        indicator.setSelectedColor(0xFFFFFFFF);
 		        indicator.setSelectedBold(true);
-		        
-		        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-			    getSupportActionBar().setHomeButtonEnabled(true);
-			    getSupportActionBar().setTitle("Orders");
+ 
+		        getSupportActionBar().setTitle("Orders");
 			   
 		    }
 
@@ -62,9 +67,9 @@ public class OrdersActivity extends ActionBarActivity {
 		        	switch(position)
 	        		{
 	        		case 0:
-	        			return new PendingActivity();
+	        			return new PendingOrdersFragment();
 	        		case 1:
-	        			return new AllActivity();
+	        			return new CompletedOrdersFragment();
 	        		}
 	                return null;		        
 	            }
@@ -79,15 +84,6 @@ public class OrdersActivity extends ActionBarActivity {
 		            return CONTENT.length;
 		        }
 		    }
-		    @Override
-		    public boolean onOptionsItemSelected(MenuItem item) { 
-		            switch (item.getItemId()) {
-		            case android.R.id.home: 
-		                onBackPressed();
-		                return true;
-		            }
-
-		        return super.onOptionsItemSelected(item);
-		    }
+	
 	}
 

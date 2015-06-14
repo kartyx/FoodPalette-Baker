@@ -57,15 +57,11 @@ public class ProductsAdapter extends BaseAdapter{
 	        } else {
 	            holder = (ViewHolder) convertView.getTag();
 	        }
-	        holder.toppings.setText(s.getTopping());
-	        holder.product.setText(s.getProduct());
+	        holder.toppings.setText(s.getAvailableToppings());
+	        holder.product.setText(s.getProductName());
 	        holder.available.setText("AvailableToppings");
-	        if (s.getImage() != null) {
-	            holder.image.setImageBitmap(s.getImage());
-	        } else {
-	                // MY DEFAULT IMAGE
-	            holder.image.setImageResource(R.drawable.prod);
-	        }
+	        holder.image.setImageResource(R.drawable.prod);
+	        
 
 	        return convertView;
 	    }

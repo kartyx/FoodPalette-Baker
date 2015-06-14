@@ -34,10 +34,11 @@
         android:paddingLeft="10dp"
         android:gravity="center"
         android:paddingRight="10dp"
+        android:id="@+id/availability"
         />
 </LinearLayout>
 <com.foodpalette_baker.RoundedImageView
-        android:id="@+id/imageView_round"
+        android:id="@+id/bakerImage"
         android:layout_width="80dp"
         android:layout_height="80dp"
         android:layout_marginTop="15dp"
@@ -54,7 +55,7 @@
     android:fontFamily="ROBOTO"
     android:gravity="center"
     android:layout_marginBottom="15dp"
-    
+    android:id="@+id/bakerName"
     />	
     
 <LinearLayout 
@@ -129,6 +130,7 @@
     android:fontFamily="roboto"
     android:gravity="center"
     android:textSize="12sp"
+    android:id="@+id/bakerRating"
     />
 <View 
         android:layout_width="1dp"
@@ -145,6 +147,7 @@
     android:fontFamily="roboto"
     android:gravity="center"
     android:textSize="12sp"
+    android:id="@+id/totalProducts"
     />
 <View 
         android:layout_width="1dp"
@@ -161,6 +164,7 @@
     android:fontFamily="roboto"
     android:gravity="center"
     android:textSize="12sp"
+    android:id="@+id/totalReviews"
     />
 </LinearLayout>
 <LinearLayout 
@@ -176,11 +180,11 @@
     android:textStyle="bold"
     android:padding="5dp"
     android:gravity="center"
-    android:text="PENDING ORDERS"
+    android:text="Orders To Be Approved"
     android:textSize="18sp"
     android:layout_marginLeft="20dp"
     android:layout_marginRight="20dp"
-    android:background="#19EEAF"
+    android:background="#0ee9af"
     android:textColor="#FFF"
     android:layout_marginTop="10dp"
     />
@@ -205,14 +209,7 @@
     	android:layout_height="4dp"
     	android:background="#FFF"
 	    />
-<!-- <View 
-    android:background="#000"
-    android:layout_width="match_parent"
-    android:layout_height="1dp"
-    android:layout_marginLeft="10dp"
-    android:layout_marginRight="10dp"
-    android:paddingBottom="20dp"
-    /> -->
+
     </LinearLayout>
 
     </LinearLayout>

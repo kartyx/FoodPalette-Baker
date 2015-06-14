@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal" 
+	android:background="#F0F0F0"
+    android:layout_gravity="center_horizontal"
+    android:weightSum="100"
+    android:paddingTop="5dp"
+    android:paddingBottom="5dp"
+    >
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_weight="50"
+    android:fontFamily="Roboto"
+    android:gravity="center"
+    android:text="Order"
+    android:id="@+id/pendingOrder"
+    android:textSize="15sp" />
+<TextView 
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_weight="50"
+    android:fontFamily="Roboto"
+    android:gravity="center"
+    android:text="Amount"
+    android:id="@+id/pendingPay"
+    android:textSize="15sp"
+    />
+   
+</LinearLayout>
