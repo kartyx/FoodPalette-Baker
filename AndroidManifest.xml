@@ -20,7 +20,8 @@
         <activity 
             android:name="com.foodpalette_baker.WelcomeActivity"
             android:theme="@style/AppTheme"
-            android:label="Login Activity"
+            android:label="Food Palette-Baker"
+            android:screenOrientation="nosensor"            
             >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>"
@@ -31,6 +32,7 @@
             android:name="com.foodpalette_baker.LoginActivity"
             android:theme="@style/AppTheme"
             android:label="Login Activity"
+            android:screenOrientation="nosensor"            
             >
             <intent-filter>
                 <action android:name="com.foodpalette_baker.LOGINACTIVITY"/>"
@@ -41,6 +43,7 @@
             android:name="com.foodpalette_baker.MainActivity"
             android:theme="@style/AppTheme"
             android:label="Main Activity"
+            android:screenOrientation="nosensor"            
             >
             <intent-filter>
                 <action android:name="com.foodpalette_baker.MAINACTIVITY"/>
@@ -51,6 +54,7 @@
             android:name="com.foodpalette_baker.OrdersActivity"
             android:theme="@style/AppTheme"
             android:label="Orders Activity"
+            android:screenOrientation="nosensor"            
             >
             <intent-filter>
                 <action android:name="com.foodpalette_baker.ORDERSACTIVITY"/>
@@ -61,6 +65,7 @@
             android:name="com.foodpalette_baker.ProductsActivity"
             android:theme="@style/AppTheme"
             android:label="Product Activity"
+            android:screenOrientation="nosensor"            
             >
             <intent-filter>
                 <action android:name="com.foodpalette_baker.PRODUCTSACTIVITY"/>
@@ -71,6 +76,7 @@
             android:name="com.foodpalette_baker.PaymentActivity"
             android:theme="@style/AppTheme"
             android:label="Payment Activity"
+            android:screenOrientation="nosensor"            
             >
             <intent-filter>
                 <action android:name="com.foodpalette_baker.PAYMENTACTIVITY"/>
@@ -81,6 +87,7 @@
             android:name="com.foodpalette_baker.ReviewsActivity"
             android:theme="@style/AppTheme"
             android:label="Reviews Activity"
+            android:screenOrientation="nosensor"            
             >
             <intent-filter>
                 <action android:name="com.foodpalette_baker.REVIEWSACTIVITY"/>
@@ -91,6 +98,7 @@
             android:name="com.foodpalette_baker.ToppingActivity"
             android:theme="@style/AppTheme"
             android:label="Topping Activity"
+            android:screenOrientation="nosensor"            
             >
             <intent-filter>
                 <action android:name="com.foodpalette_baker.TOPPINGACTIVITY"/>
@@ -101,7 +109,8 @@
             android:name="com.foodpalette_baker.PendingHistoryActivity"
             android:theme="@style/AppTheme"
             android:label="Pending History Activity"
-            >
+            android:screenOrientation="nosensor"
+                        >
             <intent-filter>
                 <action android:name="com.foodpalette_baker.PENDINGHISTORYACTIVITY"/>
                 <category android:name="android.intent.category.DEFAULT"/>
@@ -111,6 +120,7 @@
             android:name="com.foodpalette_baker.PendingPaymentActivity"
             android:theme="@style/AppTheme"
             android:label="Pending Payment Activity"
+            android:screenOrientation="nosensor"            
             >
             <intent-filter>
                 <action android:name="com.foodpalette_baker.PENDINGPAYMENTACTIVITY"/>
@@ -121,9 +131,21 @@
             android:name="com.foodpalette_baker.WalletActivity"
             android:theme="@style/AppTheme"
             android:label="Wallet Activity"
+            android:screenOrientation="nosensor"           
             >
             <intent-filter>
                 <action android:name="com.foodpalette_baker.WALLETACTIVITY"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity 
+            android:name="com.foodpalette_baker.SelectProductsActivity"
+            android:theme="@style/AppTheme"
+            android:label="Select Products Activity"
+            android:screenOrientation="nosensor"            
+            >
+            <intent-filter>
+                <action android:name="com.foodpalette_baker.SELECTPRODUCTSACTIVITY"/>
                 <category android:name="android.intent.category.DEFAULT"/>
             </intent-filter>
         </activity>

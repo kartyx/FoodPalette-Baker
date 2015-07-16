@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FFF"
+     >
+<TextView 
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:text="Select a Product"
+    android:fontFamily="roboto"
+    android:textSize="20sp"
+    android:background="#0ee9af"
+    android:textColor="#FFF"
+    android:padding="5dp"
+    />    
+<View 
+    android:layout_width="match_parent"
+    android:layout_height="1dp"
+    android:layout_margin="10dp"
+    android:background="#BCBCBC"
+    />
+<ListView 
+    android:id="@+id/selectproductslist"
+    android:layout_width="match_parent"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:layout_height="wrap_content"
+    android:dividerHeight="10dp"
+    android:background="#FFF"
+    android:divider="#FFF"
+    ></ListView>
+</LinearLayout>

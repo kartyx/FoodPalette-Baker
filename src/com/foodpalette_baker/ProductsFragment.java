@@ -35,9 +35,11 @@ public class ProductsFragment extends Fragment {
 	private ListView products;
 	private View activityView;
 	private FragmentActivity fa;
-	private String[] productid,productname,productimage,productprice,productdescription,Availability,NoOfBuys,toppings;
+	private String[] productname,productimage,productprice,productdescription,Availability,NoOfBuys,toppings;
+	static String[] productid;
 	private String[][] toppingid,toppingname;
 	private String[] AvailableToppings;
+	static List<ProductStructure> Items;
 	public View onCreateView(LayoutInflater inflater,
 			@Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
@@ -63,7 +65,7 @@ public class GetProducts extends AsyncTask<Void,Void,Void>
 	protected Void doInBackground(Void... arg0) {
 		// TODO Auto-generated method stub
 		HttpClient httpclient = new DefaultHttpClient();
-		String url="http://www.thebigstudio.com/foodpalettesample/Api/ManageProductsApi.php";
+		String url=WelcomeActivity.host+"/ManageProductsApi.php";
 	    HttpPost httppost = new HttpPost(url);
 
 	    try {
@@ -123,14 +125,14 @@ public void parseResponse(String jsonResponse) {
 	for(int i=0;i<Products.length();i++)
 	{
 	JSONObject Product=Products.getJSONObject(i);
-	productid[i]=Product.getString("ProductId").toString();
-	productname[i]=Product.getString("ProductName").toString();
-	productimage[i]=Product.getString("ProductImage").toString();
-	productprice[i]=Product.getString("ProductPrice").toString();
-	productdescription[i]=Product.getString("ProductDescription").toString();
-	Availability[i]=Product.getString("Availability").toString();
-	NoOfBuys[i]=Product.getString("NoOfBuys").toString();
-	toppings[i]=Product.getString("Toppings").toString();
+	productid[i]=Product.optString("ProductId").toString();
+	productname[i]=Product.optString("ProductName").toString();
+	productimage[i]=Product.optString("ProductImage").toString();
+	productprice[i]=Product.optString("ProductPrice").toString();
+	productdescription[i]=Product.optString("ProductDescription").toString();
+	Availability[i]=Product.optString("Availability").toString();
+	NoOfBuys[i]=Product.optString("NoOfBuys").toString();
+	toppings[i]=Product.optString("Toppings").toString();
 	JSONArray Toppings = new JSONArray(toppings[i]);
 	toppingid=new String[Products.length()][Toppings.length()];
 	toppingname=new String[Products.length()][Toppings.length()];
@@ -138,14 +140,14 @@ public void parseResponse(String jsonResponse) {
 	for(int j=0;j<Toppings.length();j++)
 	{
 		JSONObject Topping = Toppings.getJSONObject(j);
-		toppingid[i][j]= Topping.getString("ToppingId");
-		toppingname[i][j]= Topping.getString("ToppingName");
+		toppingid[i][j]= Topping.optString("ToppingId");
+		toppingname[i][j]= Topping.optString("ToppingName");
 		if(j==Toppings.length()-1)
-			AvailableToppings[i]+=Topping.getString("ToppingName");
+			AvailableToppings[i]+=Topping.optString("ToppingName");
 		else
-			AvailableToppings[i]+=Topping.getString("ToppingName")+",";
+			AvailableToppings[i]+=Topping.optString("ToppingName")+",";
 	}
-	List<ProductStructure> Items = new ArrayList<ProductStructure>();
+	 Items = new ArrayList<ProductStructure>();
 	for (int k = 0; k <Products.length() ; k++) {
 		ProductStructure item = new ProductStructure(productid[k],productimage[k],productname[k],productprice[k],productdescription[k],Availability[k],NoOfBuys[k],AvailableToppings[k]);
 		   Items.add(item);

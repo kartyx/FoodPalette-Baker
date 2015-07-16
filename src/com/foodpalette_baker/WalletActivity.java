@@ -46,7 +46,7 @@ public class WalletActivity extends ActionBarActivity{
 		protected Void doInBackground(Void... arg0) {
 			// TODO Auto-generated method stub
 			HttpClient httpclient = new DefaultHttpClient();
-			String url="http://www.thebigstudio.com/foodpalettesample/Api/PaymentApi.php";
+			String url=WelcomeActivity.host+"/PaymentApi.php";
 		    HttpPost httppost = new HttpPost(url);
 
 		    try {

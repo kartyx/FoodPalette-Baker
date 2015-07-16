@@ -30,6 +30,12 @@
     	android:layout_gravity="start"
         android:alpha="0.7"
         >
+	<ImageView 
+	    android:id="@+id/BakerImage"
+	    android:layout_width="240dp"
+	    android:layout_height="200dp"
+	    android:src="@drawable/prod"
+	    />        	    
     <ListView
         android:id="@+id/left_drawer_list"
         android:layout_height="wrap_content"

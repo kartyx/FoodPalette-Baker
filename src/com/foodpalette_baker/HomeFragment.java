@@ -51,7 +51,7 @@ public class HomeFragment  extends Fragment{
 		orderslist=(ListView)activityView.findViewById(R.id.orderslist);
 		fa=(FragmentActivity)getActivity();
 		
-		new GetBakerDetails().execute();
+		  new GetBakerDetails().execute();
 		  BakerName=(TextView)activityView.findViewById(R.id.bakerName);
 	      Rating=(TextView)activityView.findViewById(R.id.bakerRating);
 	      TotalProducts=(TextView)activityView.findViewById(R.id.totalProducts);
@@ -90,7 +90,7 @@ public class HomeFragment  extends Fragment{
 		protected Void doInBackground(Void... params) {
 			// TODO Auto-generated method stub
 			HttpClient httpclient = new DefaultHttpClient();
-			String url="http://www.thebigstudio.com/foodpalettesample/Api/HomeActivityApi.php";
+			String url=WelcomeActivity.host+"/HomeActivityApi.php";
 		    HttpPost httppost = new HttpPost(url);
 
 		    try {
@@ -134,7 +134,7 @@ class GetBakerDetails extends AsyncTask<Void,Void,Void>
 		protected Void doInBackground(Void... params) {
 			// TODO Auto-generated method stub
 			HttpClient httpclient = new DefaultHttpClient();
-			String url="http://www.thebigstudio.com/foodpalettesample/Api/HomeActivityApi.php";
+			String url=WelcomeActivity.host+"/HomeActivityApi.php";
 		    HttpPost httppost = new HttpPost(url);
 
 		    try {
@@ -185,6 +185,7 @@ public void parseResponse(String jsonResponse)
 		availability.setChecked(true);
 	else
 		availability.setChecked(false);
+	
 	ordersArray=new JSONArray(jObject.optString("orderlist"));
 	orderid=new String[ordersArray.length()];
 	productid=new String[ordersArray.length()];
@@ -214,15 +215,9 @@ public void parseResponse(String jsonResponse)
 	{
 		Toast.makeText(fa, "Something Went Wrong!!",Toast.LENGTH_SHORT).show();
 	}
-	}
-	catch(NullPointerException e)
-	{
-		e.printStackTrace();
-	} catch (JSONException e) {
-		// TODO Auto-generated catch block
-		e.printStackTrace();
-	}
+	
 	List<OrderStructure> Items = new ArrayList<OrderStructure>();
+	
 	for (int i = 0; i <ordersArray.length() ; i++) {
 		OrderStructure item = new OrderStructure(productname[i],productprice[i],toppingname[i],orderdescription[i],productimage[i]);
 		   Items.add(item);
@@ -230,6 +225,15 @@ public void parseResponse(String jsonResponse)
 	      OrdersAdapter adapter = new OrdersAdapter(fa,Items);	
 	
 	      orderslist.setAdapter(adapter);	
+	}
+	catch(NullPointerException e)
+	{
+		
+		e.printStackTrace();
+	} catch (JSONException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}
 }
 
 }

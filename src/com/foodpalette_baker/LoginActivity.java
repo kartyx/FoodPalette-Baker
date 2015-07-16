@@ -43,7 +43,6 @@ public JSONObject jObject;
 		username=(EditText)findViewById(R.id.username);
 		password=(EditText)findViewById(R.id.password);	
 		
-		
 	}
 public void login(View v) 
 {
@@ -54,11 +53,20 @@ public void login(View v)
 		//       Intent MainActivity= new Intent("com.foodpalette_baker.MAINACTIVITY");
 		//LoginActivity.this.finish();
 		//startActivity(MainActivity);
-		new Login().execute();
+		ConnectionDetector detector = new ConnectionDetector(this);
+		if(detector.isConnectingToInternet())
+		{				new Login().execute();
+			/*Intent MainActivity= new Intent("com.foodpalette_baker.MAINACTIVITY");
+			LoginActivity.this.finish();
+			startActivity(MainActivity);*/
+
+		}
+		else
+		{
+			Toast.makeText(getApplicationContext(), "Not Connected to the Internet", Toast.LENGTH_SHORT).show();
+		}
+		
 	}
-	//Intent MainActivity= new Intent("com.foodpalette_baker.MAINACTIVITY");
-	//LoginActivity.this.finish();
-	//startActivity(MainActivity);
 }
 
 class Login extends AsyncTask<Void,Void,Void>{
@@ -71,7 +79,7 @@ class Login extends AsyncTask<Void,Void,Void>{
 	protected Void doInBackground(Void... params) {
 
 		HttpClient httpclient = new DefaultHttpClient();
-		String url="http://www.thebigstudio.com/foodpalettesample/Api/LoginAPI.php";
+		String url=WelcomeActivity.host+"/LoginAPI.php";
 	    HttpPost httppost = new HttpPost(url);
 
 	    try {
@@ -80,7 +88,7 @@ class Login extends AsyncTask<Void,Void,Void>{
 	        Log.d("hash", hash);
 	        nameValuePairs.add(new BasicNameValuePair("tag","login"));
 	        nameValuePairs.add(new BasicNameValuePair("username", user));
-	        nameValuePairs.add(new BasicNameValuePair("password",hash));	
+	        nameValuePairs.add(new BasicNameValuePair("password",pass));	
 	        httppost.setEntity(new UrlEncodedFormEntity(nameValuePairs));
 	        HttpResponse response = httpclient.execute(httppost);
 	        jsonResponse=Response.ReadJSON(response);
@@ -94,18 +102,9 @@ class Login extends AsyncTask<Void,Void,Void>{
 	@Override
 	protected void onPostExecute(Void result) {
 		Log.v("return",jsonResponse);
-		if(jsonResponse.equalsIgnoreCase("No"))
-		{
-			Toast.makeText(getBaseContext(), "Wrong Username or Password", 2000).show();
-			WelcomeActivity.session_key=null;
-		}
-		else
-		{
 			try {
 				jObject=new JSONObject(jsonResponse);
-			} catch (JSONException e) {
-				e.printStackTrace();
-			}
+			
 			boolean error=jObject.optBoolean("error");
 			if(error)
 			{
@@ -123,8 +122,14 @@ class Login extends AsyncTask<Void,Void,Void>{
 				LoginActivity.this.finish();
 				startActivity(MainActivity);
 			}
+			} catch (JSONException e) {
+				e.printStackTrace();
+			}
+			catch(NullPointerException e)
+			{
+				e.printStackTrace();
+			}
 			
-		}	
 
 		  
 }
@@ -143,11 +148,6 @@ public String generateHash(String toHash) {
     return convertToHex(hash);
 }
  
-/**
-* Converts the given byte[] to a hex string.
-* @param raw the byte[] to convert
-* @return the string the given byte[] represents
-*/
 private String convertToHex(byte[] raw) {
     StringBuffer sb = new StringBuffer();
     for (int i = 0; i < raw.length; i++) {

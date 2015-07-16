@@ -18,6 +18,7 @@ import org.json.JSONObject;
 import com.viewpagerindicator.TitlePageIndicator;
 import com.viewpagerindicator.TitlePageIndicator.IndicatorStyle;
 
+import android.animation.ObjectAnimator;
 import android.annotation.SuppressLint;
 import android.annotation.TargetApi;
 import android.content.Context;
@@ -54,8 +55,8 @@ public class MainActivity extends ActionBarActivity {
 private static final String[] CONTENT = new String[] { "Manage Products","Home", "Pending Orders"};
 private DrawerLayout mDrawerLayout = null;
 private ActionBarDrawerToggle mDrawerToggle = null;
-static final Class[] classArray = new Class[] {com.foodpalette_baker.MainActivity.class, com.foodpalette_baker.OrdersActivity.class,com.foodpalette_baker.PaymentActivity.class,com.foodpalette_baker.ReviewsActivity.class };
-static final String[] names={"com.foodpalette_baker.MAINACTIVITY","com.foodpalette_baker.ORDERSACTIVITY","com.foodpalette_baker.PAYMENTACTIVITY","com.foodpalette_baker.REVIEWSACTIVITY"};
+static final Class[] classArray = new Class[] {com.foodpalette_baker.MainActivity.class, com.foodpalette_baker.OrdersActivity.class,com.foodpalette_baker.PaymentActivity.class,com.foodpalette_baker.SelectProductsActivity.class };
+static final String[] names={"com.foodpalette_baker.MAINACTIVITY","com.foodpalette_baker.ORDERSACTIVITY","com.foodpalette_baker.PAYMENTACTIVITY","com.foodpalette_baker.SELECTPRODUCTSACTIVITY"};
 List<NavBarItems> navBarItems;
 ListView mylistview;
 private LinearLayout navBarLayout;
@@ -108,12 +109,18 @@ static TextView TotalOrders;
                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) 
                {
                    framed.setTranslationX(moveFactor);
+                   // oa=ObjectAnimator.ofFloat(framed, "rotationY",-moveFactor);
+                   //oa.start();
+                   //framed.setRotationY(moveFactor);
+                   //framed.setScaleX(-i++);
                }
                else
                {
+            	   //ObjectAnimator oa=ObjectAnimator.ofFloat(framed, "rotationY",moveFactor);
                    TranslateAnimation anim = new TranslateAnimation(lastTranslate, moveFactor, 0.0f, 0.0f);
                    anim.setDuration(0);
                    anim.setFillAfter(true);
+                   //oa.start();
                    framed.startAnimation(anim);
 
                    lastTranslate = moveFactor;

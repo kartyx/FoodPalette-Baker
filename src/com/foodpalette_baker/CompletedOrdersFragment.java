@@ -56,7 +56,7 @@ public class CompletedOrdersFragment extends Fragment {
 		protected Void doInBackground(Void... arg0) {
 			// TODO Auto-generated method stub
 			HttpClient httpclient = new DefaultHttpClient();
-			String url="http://www.thebigstudio.com/foodpalettesample/Api/OrdersApi.php";
+			String url=WelcomeActivity.host+"/OrdersApi.php";
 		    HttpPost httppost = new HttpPost(url);
 
 		    try {

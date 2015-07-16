@@ -1,17 +1,17 @@
 package com.foodpalette_baker;
 
 public class ProductStructure {
-	 	private String ProductId,ProductImage,ProductName,ProductPrice,ProductDescription,Availability,NoOfBuys,AvailableToppings;
+	 	private String ProductId,ProductImage,ProductName,ProductPrice,ProductDescription,status,NoOfBuys,AvailableToppings;
 	       
 	 
 	 
-	    public ProductStructure(String ProductId,String ProductName,String ProductImage,String ProductPrice,String ProductDescription,String Availability,String NoOfBuys,String AvailableToppings) {
+	    public ProductStructure(String ProductId,String ProductImage,String ProductName,String ProductPrice,String ProductDescription,String status,String NoOfBuys,String AvailableToppings) {
 	                this.ProductId = ProductId;
 	                this.ProductImage = ProductImage;
 	                this.ProductName = ProductName;
 	                this.ProductPrice = ProductPrice;
 	                this.ProductDescription = ProductDescription;
-	                this.Availability = Availability;
+	                this.status = status;
 	                this.NoOfBuys=NoOfBuys;	      
 	                this.AvailableToppings=AvailableToppings;
 	    }	
@@ -52,11 +52,11 @@ public class ProductStructure {
 	    	this.ProductDescription=ProductDescription;
 	    }
 	    
-	    public String getAvailability(){
-	    	return Availability;
+	    public String getStatus(){
+	    	return status;
 	    }
-	    public void setAvailability(String Availability){
-	    	this.Availability=Availability;
+	    public void setStatus(String status){
+	    	this.status=status;
 	    }
 	    
 	    public String getNoOfBuys(){

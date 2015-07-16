@@ -56,9 +56,8 @@ public class GetPendingOrders extends AsyncTask<Void,Void,Void>
 	protected Void doInBackground(Void... arg0) {
 		// TODO Auto-generated method stub
 		HttpClient httpclient = new DefaultHttpClient();
-		String url="http://www.thebigstudio.com/foodpalettesample/Api/OrdersApi.php";
+		String url=WelcomeActivity.host+"/OrdersApi.php";
 	    HttpPost httppost = new HttpPost(url);
-
 	    try {
 	        List<NameValuePair> nameValuePairs = new ArrayList<NameValuePair>(2);
 	        nameValuePairs.add(new BasicNameValuePair("tag","Pending"));
@@ -93,7 +92,7 @@ public class GetPendingOrders extends AsyncTask<Void,Void,Void>
 public void parseResponse(String response) {
 	JSONArray ordersArray=null;
 	// TODO Auto-generated method stub
-	Log.v("return",response);
+	//Log.v("return",response);
 	try{
 	JSONObject jObject = new JSONObject(response);
 	
@@ -126,18 +125,17 @@ public void parseResponse(String response) {
 	}
 	else
 	{
-		Toast.makeText(fa, "Something Went Wrong!!",Toast.LENGTH_SHORT).show();
+	 	Toast.makeText(fa, "Something Went Wrong!!",Toast.LENGTH_SHORT).show();
 	}
 	}
 	catch(NullPointerException e)
 	{
 		e.printStackTrace();
 	} catch (JSONException e) {
-		// TODO Auto-generated catch block
 		e.printStackTrace();
 	}
 	List<OrderStructure> Items = new ArrayList<OrderStructure>();
-	for (int i = 0; i <ordersArray.length() ; i++) {
+				for (int i = 0; i <ordersArray.length() ; i++) {
 		OrderStructure item = new OrderStructure(productname[i],productprice[i],toppingname[i],orderdescription[i],productimage[i]);
 		   Items.add(item);
 		 }
