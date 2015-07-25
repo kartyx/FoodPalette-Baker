@@ -105,12 +105,12 @@ class Login extends AsyncTask<Void,Void,Void>{
 			try {
 				jObject=new JSONObject(jsonResponse);
 			
-			boolean error=jObject.optBoolean("error");
-			if(error)
+			String error=jObject.optString("error");
+			if(error.equalsIgnoreCase("true"))
 			{
 				Toast.makeText(getBaseContext(), "Wrong UserName or Password. Try Again!!", 2000).show();
 			}
-			else
+			else if(error.equalsIgnoreCase("false"))
 			{
 				WelcomeActivity.username=user;
 				WelcomeActivity.session_key=jObject.optString("SessionKey");
